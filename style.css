@@ -1,4 +1,9 @@
 /* General Styling */
+:root {
+  --white: white;
+  --dark-white: #dddddd;
+  --transparent-black: rgba(0, 0, 0, 0.85);
+}
 
 * {
   padding: 0;
@@ -6,7 +11,7 @@
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  color: white;
+  color: var(--white);
   list-style-type: none;
 }
 
@@ -22,9 +27,30 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  letter-spacing: 4px;
+}
+
+h2 {
+  letter-spacing: 2px;
+}
+
 #content {
   display: flex;
   flex-direction: column;
+}
+
+main {
+  flex-basis: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
 }
 
 /* Navbar */
@@ -32,8 +58,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10vh;
-  background-color: rgba(0, 0, 0, 0.85);
+  flex-basis: 10vh;
+  background-color: var(--transparent-black);
   padding: 0 32px;
 }
 
@@ -46,11 +72,6 @@ nav {
 
 .logo-wrapper .logo-img {
   width: 90px;
-}
-
-.logo-wrapper h1 {
-  font-weight: 700;
-  letter-spacing: 4px;
 }
 
 nav ul {
@@ -67,7 +88,7 @@ nav ul li {
   transition: transform 0.25s;
 }
 
-nav ul li:hover {
+nav ul li:hover, nav ul li.active {
   transform: translateY(-3px);
 }
 
@@ -83,6 +104,31 @@ nav ul li::after {
   transition: background-color 0.25s;
 }
 
-nav ul li:hover::after {
+nav ul li:hover::after,
+nav ul li.active::after {
   background-color: white;
+}
+
+/* Home Card */
+
+.home-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  width: 75%;
+  background-color: var(--transparent-black);
+  border-radius: 10px;
+}
+
+.home-card-img {
+  aspect-ratio: 1 / 1;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.home-card-text p {
+  margin-top: 8px;
+  color: var(--dark-white);
 }

@@ -1,0 +1,62 @@
+/* General Styling */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: white;
+  list-style-type: none;
+}
+
+body {
+  height: 100vh;
+  background-image: url('img/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 0 32px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo-wrapper .logo-img {
+  width: 90px;
+}
+
+.logo-wrapper h1 {
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+nav ul li {
+  font-size: 1rem;
+  letter-spacing: 2px;
+}

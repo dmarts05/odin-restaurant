@@ -3,9 +3,13 @@ import createHomeTab from './home-tab';
 function clearTab() {
   const tab = document.querySelector('main');
 
-  tab.childNodes.forEach((child) => {
-    tab.removeChild(child);
-  });
+  tab.classList.add('fade');
+
+  setTimeout(() => {
+    tab.childNodes.forEach((child) => {
+      tab.removeChild(child);
+    });
+  }, 100);
 }
 
 function switchTab(e) {
@@ -15,20 +19,23 @@ function switchTab(e) {
   document.querySelector('.active').classList.remove('active');
   clearTab();
 
-  const selectedTab = e.target;
-  selectedTab.parentNode.classList.add('active');
+  setTimeout(() => {
+    tab.classList.remove('fade');
+    const selectedTab = e.target;
+    selectedTab.parentNode.classList.add('active');
 
-  switch (selectedTab.id) {
-    case 'home-link':
-      tab.appendChild(createHomeTab());
-      break;
-    case 'menu-link':
-      break;
-    case 'contact-link':
-      break;
-    default:
-      break;
-  }
+    switch (selectedTab.id) {
+      case 'home-link':
+        tab.appendChild(createHomeTab());
+        break;
+      case 'menu-link':
+        break;
+      case 'contact-link':
+        break;
+      default:
+        break;
+    }
+  }, 100);
 }
 
 function enableTabSwitching() {

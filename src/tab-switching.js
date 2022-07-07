@@ -32,7 +32,7 @@ function switchTab(e) {
 }
 
 function enableTabSwitching() {
-  const menuLinks = document.querySelectorAll('.nav-menu li a');
+  const menuLinks = document.querySelectorAll('.nav-menu li');
 
   menuLinks.forEach((link) => link.addEventListener('click', switchTab));
 }

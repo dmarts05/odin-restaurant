@@ -169,3 +169,23 @@ nav .nav-menu li.active::after {
 .menu-item .menu-item-img {
   width: 200px;
 }
+
+/* Contact */
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  gap: 16px;
+  padding: 36px;
+  background-color: var(--transparent-black);
+  border-radius: 10px;
+}
+
+.contact-card iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 10px;
+}

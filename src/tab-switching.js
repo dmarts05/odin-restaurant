@@ -1,5 +1,6 @@
 import createHomeTab from './home-tab';
 import createMenuTab from './menu-tab';
+import createContactTab from './contact-tab';
 
 function clearTab() {
   const tab = document.querySelector('main');
@@ -33,6 +34,7 @@ function switchTab(e) {
         tab.appendChild(createMenuTab(8));
         break;
       case 'contact-link':
+        tab.appendChild(createContactTab());
         break;
       default:
         break;

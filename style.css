@@ -51,6 +51,11 @@ main {
   justify-content: center;
   align-items: center;
   overflow: auto;
+  transition: transform 0.25s;
+}
+
+main.fade {
+  transform: scale(0);
 }
 
 /* Navbar */

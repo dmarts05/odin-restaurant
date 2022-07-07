@@ -19,7 +19,7 @@ body {
   height: 100vh;
   background-image: url('img/background.jpg');
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
 }
 
@@ -50,7 +50,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: auto;
   transition: transform 0.25s;
 }
 
@@ -95,7 +94,8 @@ nav .nav-menu li {
   cursor: pointer;
 }
 
-nav .nav-menu li:hover, nav .nav-menu li.active {
+nav .nav-menu li:hover,
+nav .nav-menu li.active {
   transform: translateY(-3px);
 }
 
@@ -138,4 +138,34 @@ nav .nav-menu li.active::after {
 .home-card-text p {
   margin-top: 8px;
   color: var(--dark-white);
+}
+
+/* Menu */
+.menu-wrapper {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 32px;
+  padding: 32px;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+  background-color: var(--transparent-black);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.25s;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item .menu-item-img {
+  width: 200px;
 }
